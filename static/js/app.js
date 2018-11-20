@@ -18,9 +18,8 @@ console.log("date:",inputDate);
 console.log("filtering date");
         var dateTable=tableData.filter(entry => entry.datetime === inputDate);   
     }
-        // Select the city input element and get the value
-    var inputCityItem=d3.select("#city");
-    var inputCity=inputCityItem.property("value")
+        // Select the city input element,get the value  and convert to lower case--------------------------------------
+    var inputCity=d3.select("#city").property("value").toLowerCase();
 console.log("city:",inputCity); 
     //filter by city
     if (inputCity ===""){
@@ -29,9 +28,8 @@ console.log("city:",inputCity);
 console.log("filtering city");
         var cityTable=dateTable.filter(entry=> entry.city === inputCity); 
     }
-    // Select the state input element and get the value
-    var inputStateItem=d3.select("#state");
-    var inputState=inputStateItem.property("value")
+    // Select the state input element, get the value  and convert to lower case------------------------------------------
+    var inputState=d3.select("#state").property("value").toLowerCase();
 console.log("state:",inputState); 
     //filter by state
     if (inputState ===""){
@@ -40,9 +38,8 @@ console.log("state:",inputState);
 console.log("filtering state");
         var stateTable = cityTable.filter(entry=> entry.state === inputState); 
     }
-    // Select the shape input element and get the value
-    var inputShapeItem=d3.select("#shape");
-    var inputShape=inputShapeItem.property("value")
+    // Select the shape input element, get the value and convert to lower case-------------------------
+    var inputShape=d3.select("#shape").property("value").toLowerCase();
 console.log("shape:",inputShape); 
     //filter by shape
     if (inputShape ===""){
