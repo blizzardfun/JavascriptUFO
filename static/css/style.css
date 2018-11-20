@@ -75,6 +75,7 @@ select {
 /* ------------------------------ */
 #table-area th {
   text-align: left;  
+  
 }
 
 #table-area th:first-child,

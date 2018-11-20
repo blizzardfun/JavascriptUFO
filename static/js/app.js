@@ -58,7 +58,14 @@ console.log("filtering shape");
         var row=resultTable.append("tr").attr("class","result-row");
         Object.entries(entry).forEach(function([key,value]) {
             var cell = row.append("td");
-            cell.text(value);
+
+            if (key === "state" || key === "country"){
+                cell.text(value).style("text-transform" ,"uppercase");    
+            } else if (key == "city") {
+                cell.text(value).style("text-transform" ,"capitalize");  
+            } else {
+                cell.text(value);
+            }
         })
     
     })
