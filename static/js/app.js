@@ -8,8 +8,7 @@ submitDate.on("click", function() {
     d3.event.preventDefault();
   
     // Select the date input element and get the value
-    var inputDateItem=d3.select("#datetime");
-    var inputDate=inputDateItem.property("value");
+    var inputDate=d3.select("#datetime").property("value");
 console.log("date:",inputDate);
     //filter by date
     if (inputDate===""){
